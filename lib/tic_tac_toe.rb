@@ -100,10 +100,8 @@ def winner(board)
 end
 
 def play(board)
-  total_turns = 0
-  while total_turns < 9
+  while turn_count(board) < 9
     turn(board)
-    total_turns += 1
   end
   if won?(board)
     "Congratulations #{winner(board)}!"
