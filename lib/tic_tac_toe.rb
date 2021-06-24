@@ -100,7 +100,7 @@ def winner(board)
 end
 
 def play(board)
-  while turn_count(board) < 9
+  while !over?(board)
     turn(board)
   end
   if won?(board)
